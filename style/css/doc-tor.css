@@ -20,7 +20,6 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -29,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1.25; }
 
 blockquote, q {
   quotes: none; }
@@ -61,9 +60,12 @@ h5 {
 h6 {
   font-size: 2.2vh; }
 
-body {
+body, button {
   font-family: "Roboto Slab";
   font-size: 4vh; }
+
+p {
+  margin: 7px; }
 
 code {
   font-family: "Inconsolata"; }
@@ -71,52 +73,76 @@ code {
 a {
   text-decoration: none; }
 
+i {
+  font-weight: bolder;
+  color: #003e6d; }
+
 body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   word-wrap: break-word;
+  overflow-x: hidden;
   text-align: justify;
-  width: 100%;
-  border: 1px solid green; }
-  body header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #001F3F;
-    color: #FFFFFF;
-    width: 100%;
-    height: 100px;
-    padding: 12px;
-    position: absolute; }
+  width: 100%; }
   body nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: #2ECC40;
-    color: #FFFFFF;
-    margin-top: 110px;
-    padding: 10px;
+    background-color: #046c9f;
+    color: #ffffff;
+    position: fixed;
+    height: 100vh;
+    z-index: 1;
     width: 20%;
-    text-align: left; }
+    text-align: left;
+    overflow-y: scroll; }
     body nav a {
       color: white; }
-  body article {
+  body main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 130px; }
-    body article code {
-      background-color: #AAAAAA;
-      color: #111111;
-      width: 90%;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-left: 20%; }
+    body main header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #003e6d;
+      color: #ffffff;
+      height: 15vh;
+      width: 100%; }
+    body main article {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: space-between;
+      width: 95%;
       margin: 0 auto;
-      white-space: pre; }
+      padding: 8px; }
+      body main article code {
+        background-color: #c0c0c0;
+        color: #000000;
+        white-space: pre; }
+    body main footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: space-between;
+      width: 80%;
+      margin: 0 auto; }
+      body main footer button {
+        background-color: #f2023f;
+        color: #ffffff;
+        border: none;
+        padding: 12px;
+        border-radius: 12px; }
+      body main footer button:first-of-type {
+        background-color: #003e6d; }
 
 /*# sourceMappingURL=doc-tor.css.map */

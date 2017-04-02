@@ -17,14 +17,21 @@ h5 {
 h6 {
   font-size: 2.2vh; }
 
-body {
+body, button {
   font-family: "Roboto Slab";
   font-size: 4vh; }
+
+p {
+  margin: 7px; }
 
 code {
   font-family: "Inconsolata"; }
 
 a {
   text-decoration: none; }
+
+i {
+  font-weight: bolder;
+  color: #003e6d; }
 
 /*# sourceMappingURL=fonts.css.map */

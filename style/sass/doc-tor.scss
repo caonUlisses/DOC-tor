@@ -5,38 +5,56 @@
 body {
     @include flex(row, space-between, flex-start);
     word-wrap: break-word;
+    overflow-x: hidden;
     text-align: justify;
     width: 100%;
-    border: 1px solid green;
-    header {
-        @include flex(column);
-        @include color($navy, $white);
-        width: 100%;
-        height: 100px;
-        padding: 12px;
-        position: absolute;
-    }
     nav {
         @include flex(row, flex-start, flex-start);
-        @include color($green, $white);
-        margin-top: 110px;
-        padding: 10px;
+        @include color($main, $white);
+        position: fixed;
+        height: 100vh;
+        z-index: 1;
         width: 20%;
         text-align: left;
+        overflow-y: scroll;
         a {
             color: white;
         }
     }
-    article {
-        @include flex(column, space-between, space-between);
-        width: 75%;
-        margin: 0 auto;
-        margin-top: 130px;
-        code {
-            @include color($gray, $black);
-            width: 90%;
+    main {
+        @include flex(column, center, center);
+        width: 80%;
+        margin-left: 20%;
+        header {
+            @include flex(column);
+            @include color($back, $white);
+            height: 15vh;
+            width: 100%;
+        }
+        article {
+            @include flex(column, space-between, space-between);
+            width: 95%;
             margin: 0 auto;
-            white-space: pre;
+            padding: 8px;
+            code {
+                @include color($gray, $black);
+                white-space: pre;
+            }
+        }
+        footer {
+            @include flex(row, space-between, space-between);
+            width: 80%;
+            margin: 0 auto;
+            button {
+                background-color: $red;
+                color: $white;
+                border: none;
+                padding: 12px;
+                border-radius: 12px;
+            }
+            button:first-of-type {
+                background-color: $back;
+            }
         }
     }
 }
