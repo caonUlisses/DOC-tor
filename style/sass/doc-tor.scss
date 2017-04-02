@@ -1,0 +1,42 @@
+@import 'reset';
+@import 'mixins';
+@import 'fonts';
+@import 'colors';
+body {
+    @include flex(row, space-between, flex-start);
+    word-wrap: break-word;
+    text-align: justify;
+    width: 100%;
+    border: 1px solid green;
+    header {
+        @include flex(column);
+        @include color($navy, $white);
+        width: 100%;
+        height: 100px;
+        padding: 12px;
+        position: absolute;
+    }
+    nav {
+        @include flex(row, flex-start, flex-start);
+        @include color($green, $white);
+        margin-top: 110px;
+        padding: 10px;
+        width: 20%;
+        text-align: left;
+        a {
+            color: white;
+        }
+    }
+    article {
+        @include flex(column, space-between, space-between);
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 130px;
+        code {
+            @include color($gray, $black);
+            width: 90%;
+            margin: 0 auto;
+            white-space: pre;
+        }
+    }
+}
