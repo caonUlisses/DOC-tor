@@ -28,7 +28,7 @@ body {
         header {
             @include flex(column);
             @include color($back, $white);
-            height: 15vh;
+            height: 20vh;
             width: 100%;
         }
         article {
@@ -39,6 +39,7 @@ body {
             code {
                 @include color($gray, $black);
                 white-space: pre;
+                overflow-x: auto;
             }
         }
         footer {

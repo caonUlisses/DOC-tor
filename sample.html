@@ -26,10 +26,12 @@
                     <a href="#Who">Who is DOC-tor for?</a>
                 </li>
             </ol>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+                <a href="#Sample">Sample code</a>
+            </li>
+            <li>
+                <a href="#Contact">Contact</a>
+            </li>
         </ol>
     </nav>
     <main>
@@ -42,26 +44,67 @@
             <p>Welcome to the DOC-tor documentation. This guide is a meta-documentation (documentation for the documentation
                 tool. Pretty cool, huh?) </p>
             <p>DOC-tor is a lightweight frontend framework designed for app documentation.</p>
-            <p>The main goal of DOC-tor is to help developers to write Html documentation for projects without the need to use a gigantic frontend framework with a steep learning curve.</p>
-            <p>Through DOC-tor, a developer can write docs that will open in mobile devices as well as astonishing resolution TVs and Monitors.</p>
+            <p>The main goal of DOC-tor is to help developers to write Html documentation for projects without the need to use
+                a gigantic frontend framework with a steep learning curve.</p>
+            <p>Through DOC-tor, a developer can write docs that will open in mobile devices as well as astonishing resolution
+                TVs and Monitors.</p>
             <p>DOC-tor uses no <i>classes</i> or <i>ids</i> for styling, relying only on HTML tags.
             </p>
             <p>This way, you can write your docs without thinking too much about styling, cutting off development time.</p>
             <p>DOC-tor aims at developers who want to write docs but have tight deadlines.</p>
             <h2 id="Installation">Installation</h2>
             <p>
-                You can use DOC-tor by placing this line of code into your doc.html file (you can name it whatever you want, it doesn't matter). The code:
-<code>
+                You can use DOC-tor by placing this line of code into your doc.html file (you can name it whatever you want, it doesn't matter).
+                The code:
+                <code>
 &ltlink rel="stylesheet" href="http://ulissescaon.com/style.css">
 </code>
-            <p>That's it. You're good to go!</p>
+                <p>That's it. You're good to go!</p>
             </p>
             <h2 id="Requirements">Requirements</h2>
             <p>
-                DOC-tor uses Sass for everything. If you want to modify DOC-tor, you may install Sass. But remember, if you just want to use it, there is no need for installation.
+                DOC-tor uses Sass for everything. If you want to modify DOC-tor, you may install Sass. But remember, if you just want to
+                use it, there is no need for installation.
             </p>
             <h2 id="Who">Who is DOC-tor for?</h2>
             <p>Lazy coders who feel the need to write pretty docs without devoting their lives to do that.</p>
+            <h1 id="Sample">Sample Code</h1>
+            <p>As DOC-tor uses no classes or ids and rely exclusively on html5 tags, here's a simple emmet oneliner:</p>
+            <code>
+!>(nav>ol>li*5)+(main>(header>h1{APP name}+h2{Description})+(article>p{content})+(footer>button))
+            </code>
+            <p>This single line of code creates a sidebar with 5 ordered list-item elements, a main section with header and
+                the article element, holding the content. The footer holds, by default, buttons.</p>
+            <p>One tab key away from heaven!</p>
+            <p>If you don't use Emmet, you can use this structure:</p>
+            <ul>
+                <li>body</li>
+                <ol>
+                    <li>nav</li>
+                    <li>header</li>
+                    <ol>
+                        <li>h1</li>
+                        <li>h2</li>
+                    </ol>
+                    <li>main</li>
+                    <ol>
+                        <li>article</li>
+                        <ol>
+                            <li>p</li>
+                            <li>code</li>
+                        </ol>
+                        <li>footer</li>
+                        <ol>
+                            <li>button</li>
+                        </ol>
+                    </ol>
+                </ol>
+            </ul>
+            <p>Each word represents a tag. You put your app name and description inside a header tag, your ordered or unordered list inside a nav tag and everything from the docs text inside the article tag.</p>
+            <p>The footer is holding buttons, but may hold your info!</p>
+            <p>If you use ids on your headers, you can link your docs and create an easy index, like this very page.</p>
+            <h1 id="Contact">Contact</h1>
+            <p>If you have any questions, you can find me on ulissescaon.com or mail me at ulissescaon@gmail.com.</p>
         </article>
         <footer>
             <button>Button 1</button>
